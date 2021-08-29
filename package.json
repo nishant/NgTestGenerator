@@ -2,10 +2,10 @@
   "name": "NgTestGenerator",
   "version": "1.0.0",
   "description": "angular test generator for component render tests",
-  "main": "index.js",
+  "main": "src/parser.js",
   "scripts": {
-    "start": "./node_modules/.bin/tsc && node ../dist/parser.js",
-    "dev": "./node_modules/.bin/nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/parser.ts",
+    "start": "./node_modules/.bin/tsc && node ./dist/parser.js",
+    "watch": "./node_modules/.bin/nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/parser.ts",
     "lint": "./node_modules/.bin/eslint .",
     "lint:fix": "./node_modules/.bin/eslint . --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
