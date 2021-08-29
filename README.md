@@ -20,9 +20,9 @@ Angular unit test generator for component render tests.
 <br>
 
 #### TODO: Things to add
-Readme update for webapp
-explain app
-describe files in this app and webapp
+* Readme update for webapp
+* explain app
+* describe files in this app and webapp
 
 
 
