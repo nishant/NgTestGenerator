@@ -1,5 +1,6 @@
 # NgTestGenerator
 Angular unit test generator for component render tests.
+This is literally the opposite of TDD.
 
 ## Setup
 1. Clone this repository with `git clone https://github.com/nishant/NgTestGenerator.git`
