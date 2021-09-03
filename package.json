@@ -4,7 +4,7 @@
   "description": "angular test generator for component render tests",
   "main": "src/parser.js",
   "scripts": {
-    "start": "./node_modules/.bin/tsc && node ./dist/parser.js",
+    "start": "./node_modules/.bin/tsc && node ./dist/src/parser.js",
     "watch": "./node_modules/.bin/nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/parser.ts",
     "lint": "./node_modules/.bin/eslint .",
     "lint:fix": "./node_modules/.bin/eslint . --fix",
@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@types/glob": "^7.1.4",
-    "glob": "^7.1.7"
+    "glob": "^7.1.7",
+    "tslog": "^3.2.1"
   }
 }
