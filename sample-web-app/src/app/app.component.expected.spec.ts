@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { fixtureQueryAll, fixtureQueryNative } from '../testing-helpers';
+import {
+  fixtureQueryAll,
+  fixtureQueryNative,
+  stubComponent,
+} from '../testing-helpers';
 import { AppComponent } from './app.component';
 
 describe('AppComponentExpected', () => {
@@ -10,7 +14,7 @@ describe('AppComponentExpected', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AppComponent],
+      declarations: [AppComponent, stubComponent('app-button')],
     }).compileComponents();
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
