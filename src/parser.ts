@@ -1,3 +1,4 @@
+import { HTMLElement, parse } from 'node-html-parser';
 import { logger } from '../utils/logger';
 import { getHtmlFiles, getWebAppDir, readFile } from './preload-helpers';
 
@@ -14,3 +15,9 @@ htmlFiles.forEach((file) => {
 logger.info(`Webapp Root Directory: ${webappRootDir}\n`);
 logger.info(`HTML Files Found:\n* ${htmlFiles.join('\n')}`);
 logger.info([...fileContents.entries()]);
+
+htmlFiles.forEach((file) => {
+  const root: HTMLElement = parse(fileContents.get(file)!);
+  logger.info(`Parsed structure for '${file}'`);
+  logger.info(`\n${(root.firstChild as HTMLElement).structure}`);
+});
