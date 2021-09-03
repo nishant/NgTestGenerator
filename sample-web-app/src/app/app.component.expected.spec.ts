@@ -1,7 +1,11 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import {
+  fixtureQueryAll,
+  fixtureQueryNative,
+  stubComponent,
+} from '../testing-helpers';
 import { AppComponent } from './app.component';
-import {fixtureQueryAll, fixtureQueryNative} from "../testing-helpers";
 
 describe('AppComponentExpected', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -9,12 +13,8 @@ describe('AppComponentExpected', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [AppComponent, stubComponent('app-button')],
     }).compileComponents();
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
@@ -38,9 +38,8 @@ describe('AppComponentExpected', () => {
     });
 
     it(`should render ${numLinks} links`, () => {
-      const links = fixtureQueryAll(fixture, '.quick-link');
+      const links = fixtureQueryAll(fixture, '.links-section .quick-link');
       expect(links.length).toEqual(numLinks);
     });
   });
 });
-
