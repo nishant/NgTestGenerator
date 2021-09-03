@@ -45,6 +45,7 @@
   "dependencies": {
     "@types/glob": "^7.1.4",
     "glob": "^7.1.7",
+    "node-html-parser": "^4.1.4",
     "tslog": "^3.2.1"
   }
 }
