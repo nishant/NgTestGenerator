@@ -5,12 +5,8 @@ import { AppComponent } from './app.component';
 describe('AppComponentActual', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [AppComponent],
     }).compileComponents();
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
