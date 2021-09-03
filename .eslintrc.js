@@ -35,6 +35,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'warn',
     'class-methods-use-this': 'off',
     'prettier/prettier': [
       'error',
@@ -43,12 +44,36 @@ module.exports = {
       },
     ],
     'no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'error',
     'no-plusplus': [
       'warn',
       {
         allowForLoopAfterthoughts: true,
       },
     ],
+    'max-len': [
+      'warn',
+      {
+        code: 500,
+        tabWidth: 2,
+        comments: 250,
+        ignoreComments: false,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
   },
+  overrides: [
+    {
+      // enable the rule specifically for TypeScript files
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': ['error'],
+      },
+    },
+  ],
   ignorePatterns: ['dist/**', 'coverage/**'],
 };
